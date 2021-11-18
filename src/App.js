@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from "antd";
+import "antd/dist/antd.css";
+import "./App.css";
+import NumericButton from "./Components";
+
+const { Header, Footer, Sider, Content} = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout>
+        <Header>header</Header>
+        <Layout>
+          <Sider>left sidebar</Sider>
+          <Content>main content</Content>
+          <Sider>right sidebar</Sider>
+        </Layout>
+        <Footer>footer</Footer>
+      </Layout>
+      <NumericButton></NumericButton>
+    </>
   );
 }
 
