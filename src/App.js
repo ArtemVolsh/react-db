@@ -1,23 +1,19 @@
 import { Layout } from "antd";
 import "antd/dist/antd.css";
 import "./App.css";
-import NumericButton from "./Components";
+import CalcField from "./Components/CalcField";
 
-const { Header, Footer, Sider, Content} = Layout;
+const { Content } = Layout;
 
 function App() {
   return (
     <>
       <Layout>
-        <Header>header</Header>
-        <Layout>
-          <Sider>left sidebar</Sider>
-          <Content>main content</Content>
-          <Sider>right sidebar</Sider>
-        </Layout>
-        <Footer>footer</Footer>
+        <Content>
+					
+          <CalcField />
+        </Content>
       </Layout>
-      <NumericButton></NumericButton>
     </>
   );
 }

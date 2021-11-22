@@ -3,9 +3,11 @@ import { Button } from "antd";
 import "antd/dist/antd.css";
 
 export default class NumericButton extends Component {
-	render() {
-		return (
-			<Button>Hello</Button>
-		)
-	}
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <Button>{this.props.number}</Button>;
+  }
 }
